@@ -43,7 +43,36 @@ namespace OOP_Session_05
         
     }
     #endregion
-    
+
+    #region Second Project
+    class Maths
+    {
+        public static int Add(int a, int b)
+        {
+            return a + b;
+        }
+
+        public static int Subtract(int a, int b)
+        {
+            return a - b;
+        }
+
+        public static int Multiply(int a, int b)
+        {
+            return a * b;
+        }
+
+        public static double Divide(int a, int b)
+        {
+            if (b == 0)
+            {
+                Console.WriteLine("Cannot divide by zero.");
+                return 0;
+            }
+            return (double)a / b;
+        }
+    }
+    #endregion
 
     internal class Program
     {
@@ -96,7 +125,15 @@ namespace OOP_Session_05
             Point3D cloned = p1.Clone();
             Console.WriteLine("Cloned Point: " + cloned.ToString());
 
+            #region Second Project
+            int a = 10;
+            int b = 5;
 
+            Console.WriteLine("Add: " + Maths.Add(a, b));
+            Console.WriteLine("Subtract: " + Maths.Subtract(a, b));
+            Console.WriteLine("Multiply: " + Maths.Multiply(a, b));
+            Console.WriteLine("Divide: " + Maths.Divide(a, b));
+            #endregion
 
         }
         #region First Project 
